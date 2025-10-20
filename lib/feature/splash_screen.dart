@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:bottomnavapp/core/helpers/extensions.dart';
-import 'package:bottomnavapp/main_screen.dart';
+import 'package:bottomnavapp/feature/main/screen/main_screen.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -96,9 +96,6 @@ class _SplashScreenState extends State<SplashScreen>
                 ),
                 height: _value ? 50 : context.displayWidth / 2,
                 width: _value ? 50 : context.displayWidth / 2,
-                child: Center(
-                  child: Text('NAV APP', style: TextStyle(color: Colors.white)),
-                ),
               ),
             ),
           ),

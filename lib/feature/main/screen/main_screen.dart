@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'core/widget/slide_enimation_widget.dart';
-import 'feature/main/widget/bottom_nav_bar_widget.dart';
+import '../../../core/widget/slide_enimation_widget.dart';
+import '../widget/bottom_nav_bar_widget.dart';
 
 // ignore: must_be_immutable
 class MainScreen extends StatefulWidget {
