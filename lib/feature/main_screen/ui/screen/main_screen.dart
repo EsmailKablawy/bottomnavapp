@@ -1,10 +1,10 @@
 import 'package:bottomnavapp/core/routing/app_router.dart';
-import 'package:bottomnavapp/feature/main/cubit/main_cubit.dart';
+import 'package:bottomnavapp/feature/main_screen/cubit/main_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../core/widget/slide_enimation_widget.dart';
+import '../../../../core/widget/slide_enimation_widget.dart';
 import '../widget/bottom_nav_bar_widget.dart';
 
 // ignore: must_be_immutable
@@ -39,11 +39,4 @@ class _MainScreenState extends State<MainScreen> {
       ),
     );
   }
-
-  // final screens = [
-  //   Container(color: Colors.green),
-  //   Container(color: Colors.blue),
-  //   Container(color: Colors.red),
-  // ];
-  // final screens = [HomeScreen(), FavScreen(), ProfileScreen(), Container()];
 }

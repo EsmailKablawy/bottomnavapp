@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../feature/home/screen/home_screen.dart';
-import '../../feature/main/cubit/main_cubit.dart';
+import '../../feature/main_screen/cubit/main_cubit.dart';
 import '../../feature/splash_screen.dart';
-import '../../feature/main/screen/main_screen.dart';
+import '../../feature/main_screen/ui/screen/main_screen.dart';
 import '../di/dependency_injection.dart';
 import 'routes.dart';
 

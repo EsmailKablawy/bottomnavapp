@@ -12,7 +12,6 @@ import 'core/thems/thems.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
-  // await Firebase.initializeApp();
   await ScreenUtil.ensureScreenSize();
 
   await setupGetIt();

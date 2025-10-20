@@ -2,8 +2,8 @@ import 'package:dio/dio.dart';
 
 import 'package:get_it/get_it.dart';
 
-import '../../feature/main/cubit/main_cubit.dart';
-import '../../feature/main/data/repo/main_repo.dart';
+import '../../feature/main_screen/cubit/main_cubit.dart';
+import '../../feature/main_screen/data/repo/main_repo.dart';
 import '../networking/api_service.dart';
 import '../networking/dio_factory.dart';
 
