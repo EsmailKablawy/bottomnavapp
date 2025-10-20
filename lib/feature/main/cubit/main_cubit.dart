@@ -8,5 +8,5 @@ class MainCubit extends Cubit<MainState> {
   final MainRepo _repo;
   MainCubit(this._repo) : super(const MainState.initial());
   bool update = false;
-  ValueNotifier<String> currentIndex = ValueNotifier('');
+  ValueNotifier<int> currentIndex = ValueNotifier(0);
 }

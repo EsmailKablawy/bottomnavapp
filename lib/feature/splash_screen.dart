@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:bottomnavapp/core/helpers/extensions.dart';
-import 'package:bottomnavapp/feature/main/screen/main_screen.dart';
+import 'package:bottomnavapp/core/routing/routes.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -30,19 +30,9 @@ class _SplashScreenState extends State<SplashScreen>
           duration: const Duration(milliseconds: 1700),
         )..addStatusListener((status) async {
           if (status == AnimationStatus.completed) {
-            Navigator.pushAndRemoveUntil(
-              context,
-              PageRouteBuilder(
-                pageBuilder: (context, animation, secondaryAnimation) =>
-                    MainScreen(),
-
-                transitionsBuilder:
-                    (context, animation, secondaryAnimation, child) {
-                      return FadeTransition(opacity: animation, child: child);
-                    },
-              ),
-
-              (route) => false,
+            context.pushNamedAndRemoveUntil(
+              AppRoute.mainScreen,
+              predicate: (route) => false,
             );
 
             Timer(const Duration(milliseconds: 300), () {

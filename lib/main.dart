@@ -1,17 +1,38 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_phoenix/flutter_phoenix.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'core/cache/cach_Helper.dart';
+import 'core/di/dependency_injection.dart';
 import 'core/routing/app_router.dart';
 import 'core/thems/thems.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
+  // await Firebase.initializeApp();
+  await ScreenUtil.ensureScreenSize();
+
+  await setupGetIt();
+
+  await Future.wait([CacheHelper.init()]);
+
+  runApp(
+    EasyLocalization(
+      supportedLocales: const [Locale('ar'), Locale('en')],
+      path: 'assets/translations', // مسار الملفات المترجمة
+      fallbackLocale: const Locale('ar'),
+      child: Phoenix(child: const MyApp()),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
@@ -23,10 +44,11 @@ class MyApp extends StatelessWidget {
           statusBarColor: Colors.transparent,
         ),
         child: MaterialApp(
-          title: 'Wadai',
+          title: 'Ecommerce App',
           debugShowCheckedModeBanner: false,
           theme: themsApp.light,
-
+          localizationsDelegates: context.localizationDelegates,
+          supportedLocales: context.supportedLocales,
           locale: const Locale('en'),
           // context.locale,
           localeResolutionCallback: (locale, supportedLocales) {

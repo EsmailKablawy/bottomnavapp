@@ -1,4 +1,7 @@
+import 'package:bottomnavapp/core/routing/app_router.dart';
+import 'package:bottomnavapp/feature/main/cubit/main_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/widget/slide_enimation_widget.dart';
@@ -20,7 +23,12 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       body: Stack(
         children: [
-          IndexedStack(index: currentIndex, children: screens),
+          ValueListenableBuilder(
+            valueListenable: context.read<MainCubit>().currentIndex,
+            builder: (context, currentIndex, _) {
+              return IndexedStack(index: currentIndex, children: screens);
+            },
+          ),
           PositionedDirectional(
             bottom: 5.w,
             start: 0,
@@ -32,10 +40,10 @@ class _MainScreenState extends State<MainScreen> {
     );
   }
 
-  final screens = [
-    Container(color: Colors.green),
-    Container(color: Colors.blue),
-    Container(color: Colors.red),
-  ];
+  // final screens = [
+  //   Container(color: Colors.green),
+  //   Container(color: Colors.blue),
+  //   Container(color: Colors.red),
+  // ];
   // final screens = [HomeScreen(), FavScreen(), ProfileScreen(), Container()];
 }

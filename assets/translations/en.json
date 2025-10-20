@@ -1,0 +1,21 @@
+{
+  "":"",
+  "place": "مكان",
+  "restaurant": "مطعم",
+  "Are You Sure You Want to Delete your Account?":"هل أنت متأكد أنك تريد حذف حسابك؟",
+    "Deleting your account will permanently delete your trips history, personal details and payment information. This action can't be undo. If you’ve previously submitted a request to download your personal information ,the request will be cancelled if you delete your account.":"سيؤدي حذف حسابك إلى حذف سجل رحلاتك وبياناتك الشخصية ومعلومات الدفع نهائيًا. لا يمكن التراجع عن هذا الإجراء. إذا سبق لك تقديم طلب لتنزيل معلوماتك الشخصية، فسيتم إلغاء الطلب عند حذف حسابك.",
+    "Go Back":"عُد ل الخلف",
+    "I Have Read And Agree to the Above Statements":"لقد قرأت وأوافق على البيانات أعلاه",
+    "Why You decided to leave this App?":"لماذا قررت ترك هذا التطبيق؟",
+    "Give an optional Feedback to help us improve":"قدم تعليقًا اختياريًا لمساعدتنا على التحسين",
+    "I’m not Using this App":"أنا لا أستخدم هذا التطبيق",
+    "I Found Another Alternative":"لقد وجدت بديلا آخر",
+    "The App Contains So much Ads":"يحتوي التطبيق على الكثير من الإعلانات",
+    "This App didn’t have the features i were looking for":"هذا التطبيق لا يحتوي على الميزات التي كنت أبحث عنها",
+    "I’m not Satisfied with the packages":"أنا لست راضيا عن الطرود",
+    "Other":"اخري",
+    "Delete Account Was Sucsfully":"تم حذف الحساب بنجاح",
+    "Delete Account":"حذف الحساب",
+    "Next":"التالي"
+
+}
